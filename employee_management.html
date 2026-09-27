@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="employee_management.css">
+
+    <title>Salary Hub - Employee Management</title>
+</head>
+
+<body>
+
+    <main class="management-container">
+
+        <!-- HEADER -->
+
+        <header class="page-header">
+
+            <div>
+                <h1>Employee Management</h1>
+                <p>Manage employee information and salary</p>
+            </div>
+
+            <a href="hr.html" class="back-button">
+                Back to HR
+            </a>
+
+        </header>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-card">
+
+            <label for="searchEmployee">
+                Search Employee
+            </label>
+
+            <input
+                type="text"
+                id="searchEmployee"
+                placeholder="Search by ID, name or username..."
+            >
+
+        </section>
+
+
+        <!-- EMPLOYEE TABLE -->
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>Employee List</h2>
+
+                    <p>
+                        Total Employees:
+                        <strong id="totalEmployees">0</strong>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee ID</th>
+
+                            <th>Name</th>
+
+                            <th>Position</th>
+
+                            <th>Department</th>
+
+                            <th>Status</th>
+
+                            <th>Basic Salary</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="employeeTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p
+                id="emptyMessage"
+                class="empty-message"
+            >
+                No employees found.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- EDIT EMPLOYEE MODAL -->
+
+    <div
+        id="editModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <div>
+                    <h2>Edit Employee</h2>
+
+                    <p>
+                        Update employee information
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="closeModalBtn"
+                    class="close-button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="editEmployeeForm">
+
+                <input
+                    type="hidden"
+                    id="editUsername"
+                >
+
+
+                <!-- PERSONAL INFORMATION -->
+
+                <h3>Personal Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editFirstName"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Middle Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editMiddleName"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editLastName"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Suffix
+                        </label>
+
+                        <select id="editSuffix">
+
+                            <option value="">
+                                None
+                            </option>
+
+                            <option value="Jr.">
+                                Jr.
+                            </option>
+
+                            <option value="Sr.">
+                                Sr.
+                            </option>
+
+                            <option value="II">
+                                II
+                            </option>
+
+                            <option value="III">
+                                III
+                            </option>
+
+                            <option value="IV">
+                                IV
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="editBirthDate"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editAge"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Gender
+                        </label>
+
+                        <select id="editGender">
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editContactNumber"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="editEmail"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editAddress"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMPLOYMENT INFORMATION -->
+
+                <h3>Employment Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Position
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editPosition"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Department
+                        </label>
+
+                        <select id="editDepartment">
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            <option value="IT">
+                                IT
+                            </option>
+
+                            <option value="Human Resources">
+                                Human Resources
+                            </option>
+
+                            <option value="Finance">
+                                Finance
+                            </option>
+
+                            <option value="Accounting">
+                                Accounting
+                            </option>
+
+                            <option value="Marketing">
+                                Marketing
+                            </option>
+
+                            <option value="Operations">
+                                Operations
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Employment Status
+                        </label>
+
+                        <select id="editEmploymentStatus">
+
+                            <option value="Regular">
+                                Regular
+                            </option>
+
+                            <option value="Probationary">
+                                Probationary
+                            </option>
+
+                            <option value="Contractual">
+                                Contractual
+                            </option>
+
+                            <option value="Part-Time">
+                                Part-Time
+                            </option>
+
+                            <option value="Resigned">
+                                Resigned
+                            </option>
+
+                            <option value="Terminated">
+                                Terminated
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Date Hired
+                        </label>
+
+                        <input
+                            type="date"
+                            id="editDateHired"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SALARY -->
+
+                <h3>Salary Information</h3>
+
+                <div class="salary-edit">
+
+                    <div class="form-group">
+
+                        <label>
+                            Basic Salary
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editBasicSalary"
+                            min="0"
+                            step="0.01"
+                            placeholder="Enter basic salary"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    id="editMessage"
+                    class="edit-message"
+                ></p>
+
+
+                <div class="modal-buttons">
+
+                    <button
+                        type="button"
+                        id="cancelEditBtn"
+                        class="cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        SAVE CHANGES
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="employee_management.js"></script>
+
+</body>
+
+</html>

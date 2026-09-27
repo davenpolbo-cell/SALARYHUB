@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attendance</title>
+</head>
+
+<body>
+    
+<script>
+
+    // MANAGER ONLY
+
+    let loggedInRole =
+        localStorage.getItem("loggedInRole");
+
+    if (loggedInRole !== "manager") {
+
+        window.location.href =
+            "login.html";
+
+    }
+
+</script>
+<label>Employee ID:</label>
+
+<span>EMP</span>
+
+<input
+    type="number"
+    id="employeeNumber"
+    placeholder="001"
+>
+
+<button id="searchEmployeeBtn">
+    Search Employee
+</button>
+
+    <p id="employeeInfo"></p>
+
+    <hr>
+
+    <label>Time In:</label>
+    <input type="time" id="timeIn">
+
+    <br><br>
+
+    <label>Time Out:</label>
+    <input type="time" id="timeOut">
+
+    <br><br>
+
+    <button id="saveAttendanceBtn">
+        Save Attendance
+    </button>
+
+    <hr>
+
+    <h2>Attendance Result</h2>
+
+    <p>Employee: <span id="resultName">---</span></p>
+
+    <p>Employee ID: <span id="resultId">---</span></p>
+
+    <p>Time In: <span id="resultTimeIn">---</span></p>
+
+    <p>Time Out: <span id="resultTimeOut">---</span></p>
+
+    <p>Hours Worked: <span id="hoursWorked">0.00</span></p>
+
+    <p>Status: <span id="attendanceStatus">---</span></p>
+
+    <br>
+
+    <button onclick="window.location.href='manager.html'">
+        Back to Dashboard
+    </button>
+
+    <script src="attendance.js"></script>
+
+</body>
+
+</html>

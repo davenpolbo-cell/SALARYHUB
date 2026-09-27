@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="payroll_history.css"
+    >
+
+    <title>Salary Hub - Payroll History</title>
+
+</head>
+
+<body>
+
+    <main class="history-page">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>Payroll History</h1>
+
+                <p>
+                    Previous payroll records
+                </p>
+
+            </div>
+
+            <button
+                onclick="goBack()"
+                class="back-button"
+            >
+                Back
+            </button>
+
+        </header>
+
+
+        <section class="history-card">
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee ID</th>
+
+                            <th>Name</th>
+
+                            <th>Month</th>
+
+                            <th>Gross Pay</th>
+
+                            <th>Deductions</th>
+
+                            <th>Net Pay</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="historyTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="payroll_history.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="employee.css">
+
+    <title>Salary Hub - Employee Dashboard</title>
+</head>
+
+<body>
+
+    <main class="dashboard">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Employee Dashboard</h1>
+                <p>Salary Hub Employee Portal</p>
+            </div>
+
+            <button onclick="logout()" class="logout-button">
+                Logout
+            </button>
+
+        </header>
+
+
+        <!-- WELCOME -->
+        <section class="welcome-card">
+
+            <h2>
+                Welcome,
+                <span id="employeeName">---</span>
+            </h2>
+
+            <p>
+                View your employee information, salary,
+                attendance and payroll records.
+            </p>
+
+        </section>
+
+
+        <!-- EMPLOYEE INFORMATION -->
+        <section class="section-card">
+
+            <h2>Employee Information</h2>
+
+            <div class="info-grid">
+
+                <div class="info-item">
+                    <span>Employee ID</span>
+                    <strong id="employeeId">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Full Name</span>
+                    <strong id="employeeFullName">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Date of Birth</span>
+                    <strong id="birthDate">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Age</span>
+                    <strong id="age">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Gender</span>
+                    <strong id="gender">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Contact Number</span>
+                    <strong id="contactNumber">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Email</span>
+                    <strong id="email">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Address</span>
+                    <strong id="address">---</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EMPLOYMENT INFORMATION -->
+        <section class="section-card">
+
+            <h2>Employment Information</h2>
+
+            <div class="info-grid">
+
+                <div class="info-item">
+                    <span>Position</span>
+                    <strong id="position">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Department</span>
+                    <strong id="department">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Employment Status</span>
+                    <strong id="employmentStatus">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Date Hired</span>
+                    <strong id="dateHired">---</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Username</span>
+                    <strong id="employeeUsername">---</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SALARY -->
+        <section class="salary-card">
+
+            <div>
+                <span>Basic Salary</span>
+
+                <h2>
+                    ₱<span id="basicSalary">0.00</span>
+                </h2>
+            </div>
+
+            <p>
+                Your salary is managed by HR.
+            </p>
+
+        </section>
+
+
+        <!-- ATTENDANCE -->
+        <section class="section-card">
+
+            <h2>My Attendance</h2>
+
+            <div id="attendanceContainer">
+
+                <p class="empty-message">
+                    No attendance records found.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYSLIP -->
+        <section class="section-card">
+
+            <h2>My Payslip</h2>
+
+            <p class="section-description">
+                Select a payroll month to view your payslip.
+            </p>
+
+            <div class="payslip-controls">
+
+                <input
+                    type="month"
+                    id="employeePayslipMonth"
+                >
+
+                <button id="viewPayslipBtn">
+                    View Payslip
+                </button>
+
+            </div>
+
+            <p id="payslipMessage"></p>
+
+        </section>
+
+
+        <!-- PAYROLL HISTORY -->
+        <section class="section-card">
+
+            <h2>Payroll History</h2>
+
+            <div id="payrollHistoryContainer">
+
+                <p class="empty-message">
+                    No payroll records found.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="employee.js"></script>
+
+</body>
+
+</html>

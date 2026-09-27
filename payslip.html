@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="payslip.css"
+    >
+
+    <title>Salary Hub - Payslip</title>
+
+</head>
+
+<body>
+
+    <main class="payslip-page">
+
+        <section class="payslip-card">
+
+            <header>
+
+                <h1>SALARY HUB</h1>
+
+                <h2>EMPLOYEE PAYSLIP</h2>
+
+            </header>
+
+
+            <div class="employee-details">
+
+                <p>
+                    Employee:
+                    <strong id="resultEmployeeName">
+                        -
+                    </strong>
+                </p>
+
+                <p>
+                    Employee ID:
+                    <strong id="resultEmployeeId">
+                        -
+                    </strong>
+                </p>
+
+                <p>
+                    Payroll Month:
+                    <strong id="resultPayrollMonth">
+                        -
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="payslip-section">
+
+                <h3>Earnings</h3>
+
+                <p>
+                    Basic Salary:
+                    <span>
+                        ₱<span id="resultBasicSalary">
+                            0.00
+                        </span>
+                    </span>
+                </p>
+
+                <p>
+                    Days Worked:
+                    <span id="resultDaysWorked">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Absence Days:
+                    <span id="resultAbsentDays">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Gross Pay:
+                    <strong>
+                        ₱<span id="resultGrossPay">
+                            0.00
+                        </span>
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="payslip-section">
+
+                <h3>Deductions</h3>
+
+                <p>
+                    SSS:
+                    <span>
+                        ₱<span id="resultSSS">
+                            0.00
+                        </span>
+                    </span>
+                </p>
+
+                <p>
+                    PhilHealth:
+                    <span>
+                        ₱<span id="resultPhilHealth">
+                            0.00
+                        </span>
+                    </span>
+                </p>
+
+                <p>
+                    Pag-IBIG:
+                    <span>
+                        ₱<span id="resultPagIBIG">
+                            0.00
+                        </span>
+                    </span>
+                </p>
+
+                <p>
+                    Withholding Tax:
+                    <span>
+                        ₱<span id="resultWithholdingTax">
+                            0.00
+                        </span>
+                    </span>
+                </p>
+
+                <p>
+                    Total Deductions:
+                    <strong>
+                        ₱<span id="resultTotalDeductions">
+                            0.00
+                        </span>
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="net-pay">
+
+                <span>NET PAY</span>
+
+                <strong>
+                    ₱<span id="resultNetPay">
+                        0.00
+                    </span>
+                </strong>
+
+            </div>
+
+
+            <button
+                onclick="goBack()"
+                class="back-button"
+            >
+                BACK
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="payslip.js"></script>
+
+</body>
+
+</html>

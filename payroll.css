@@ -1,0 +1,581 @@
+/* =========================
+   SALARY HUB PAYROLL
+========================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    padding: 35px 20px;
+
+    color: #02475e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9f8ff,
+            #b8f2f8,
+            #8adfe8
+        );
+
+}
+
+
+.payroll-page {
+
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.page-header h1 {
+
+    color: #006d77;
+
+    font-size: 40px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.page-header p {
+
+    color: #277080;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 12px 20px;
+
+    color: white;
+
+    background: #00838f;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    background: #00a6b4;
+
+}
+
+
+.back-button {
+
+    background: #03506f;
+
+}
+
+
+.back-button:hover {
+
+    background: #023047;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.search-card,
+.payroll-card {
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 100, 120, 0.12);
+
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+
+    color: #00838f;
+
+    margin-bottom: 18px;
+
+    padding-left: 10px;
+
+    border-left:
+        5px solid #00b4d8;
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        auto;
+
+    gap: 15px;
+
+    align-items: end;
+
+}
+
+
+.search-row > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+label {
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #006d77;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding: 10px 12px;
+
+    border:
+        2px solid #7bdff2;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #f8feff;
+
+    color: #02475e;
+
+    font-size: 14px;
+
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #0096c7;
+
+    box-shadow:
+        0 0 8px
+        rgba(0, 150, 199, 0.20);
+
+}
+
+
+select option {
+
+    color: #02475e;
+
+}
+
+
+/* =========================
+   EMPLOYEE INFO
+========================= */
+
+.employee-info {
+
+    margin-bottom: 25px;
+
+}
+
+
+.employee-info p,
+.deductions p,
+.result-card p,
+.attendance-summary p {
+
+    background: white;
+
+    padding: 11px 14px;
+
+    border-radius: 9px;
+
+    margin-bottom: 10px;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 120, 140, 0.07);
+
+}
+
+
+span {
+
+    font-weight: bold;
+
+    color: #0077b6;
+
+}
+
+
+/* =========================
+   ATTENDANCE
+========================= */
+
+.attendance-summary {
+
+    margin-bottom: 25px;
+
+}
+
+
+#workingDays,
+#fullDays,
+#halfDays,
+#daysWorked,
+#absentDays {
+
+    color: #006d77;
+
+}
+
+
+/* =========================
+   EARNINGS
+========================= */
+
+.earnings {
+
+    margin-bottom: 25px;
+
+}
+
+
+.earnings label {
+
+    display: block;
+
+}
+
+
+.earnings input {
+
+    max-width: 350px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================
+   DEDUCTIONS
+========================= */
+
+.deductions {
+
+    margin-bottom: 25px;
+
+}
+
+
+#sss,
+#philhealth,
+#pagibig,
+#withholdingTax,
+#absenceDeduction,
+#totalDeductions {
+
+    color: #d62828;
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-card {
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077b6,
+            #00a6b4
+        );
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+
+.result-card p {
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    box-shadow: none;
+
+}
+
+
+.result-card strong {
+
+    display: block;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+}
+
+
+#basicPay,
+#grossPay,
+#netPay {
+
+    color: white;
+
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.action-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+#calculatePayrollBtn {
+
+    background: #00a896;
+
+}
+
+
+#calculatePayrollBtn:hover {
+
+    background: #028090;
+
+}
+
+
+#savePayrollBtn {
+
+    background: #2a9d8f;
+
+}
+
+
+#savePayrollBtn:hover {
+
+    background: #21867a;
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.save-message {
+
+    margin-top: 15px;
+
+    padding: 13px;
+
+    border-left:
+        5px solid #2a9d8f;
+
+    border-radius: 8px;
+
+    background: #d8fff1;
+
+    color: #00695c;
+
+    font-weight: bold;
+
+    min-height: 20px;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .search-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px 12px;
+
+    }
+
+
+    .page-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .search-row {
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+    .search-row > div {
+
+        width: 100%;
+
+    }
+
+
+    .search-row button {
+
+        width: 100%;
+
+    }
+
+
+    .action-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .action-buttons button {
+
+        width: 100%;
+
+    }
+
+}

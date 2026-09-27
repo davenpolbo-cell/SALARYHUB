@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="report.css"
+    >
+
+    <title>Salary Hub - Reports</title>
+
+</head>
+
+<body>
+
+    <main class="reports-page">
+
+        <header class="reports-header">
+
+            <div>
+                <h1>Reports</h1>
+
+                <p>
+                    Salary Hub System Reports
+                </p>
+            </div>
+
+            <button
+                onclick="goBack()"
+                class="back-button"
+            >
+                Back
+            </button>
+
+        </header>
+
+
+        <!-- FILTER -->
+
+        <section class="filter-card">
+
+            <label for="reportMonth">
+                Payroll Month
+            </label>
+
+            <input
+                type="month"
+                id="reportMonth"
+            >
+
+            <button
+                id="filterReportBtn"
+            >
+                FILTER REPORT
+            </button>
+
+            <button
+                id="showAllBtn"
+            >
+                SHOW ALL
+            </button>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <span>Total Employees</span>
+
+                <strong id="totalEmployees">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>Payroll Records</span>
+
+                <strong id="totalPayrollRecords">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>Total Gross Pay</span>
+
+                <strong id="totalGrossPay">
+                    ₱0.00
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>Total Deductions</span>
+
+                <strong id="totalDeductions">
+                    ₱0.00
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>Total Net Pay</span>
+
+                <strong id="totalNetPay">
+                    ₱0.00
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYROLL TABLE -->
+
+        <section class="table-card">
+
+            <h2>
+                Payroll Report
+            </h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee ID</th>
+
+                            <th>Name</th>
+
+                            <th>Month</th>
+
+                            <th>Gross Pay</th>
+
+                            <th>Deductions</th>
+
+                            <th>Net Pay</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="reportTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="report.js"></script>
+
+</body>
+
+</html>

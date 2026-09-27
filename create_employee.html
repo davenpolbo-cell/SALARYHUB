@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="create_employee.css"
+    >
+
+    <title>Salary Hub - Create Employee Account</title>
+
+</head>
+
+<body>
+
+    <main class="create-page">
+
+        <section class="create-card">
+
+            <!-- HEADER -->
+
+            <div class="page-header">
+
+                <img
+                    src="logo.png"
+                    alt="Salary Hub Logo"
+                    class="logo"
+                >
+
+                <div>
+
+                    <h1>Create Employee Account</h1>
+
+                    <p>
+                        Register a new employee for the Salary Hub Payroll System.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form id="employeeForm">
+
+
+                <!-- =========================
+                     PERSONAL INFORMATION
+                ========================== -->
+
+                <section class="form-section">
+
+                    <h2>Personal Information</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+                                First Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="Enter first name"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="middleName">
+                                Middle Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="middleName"
+                                placeholder="Enter middle name"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+                                Last Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Enter last name"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="suffix">
+                                Suffix
+                            </label>
+
+                            <select id="suffix">
+
+                                <option value="">
+                                    None
+                                </option>
+
+                                <option value="Jr.">
+                                    Jr.
+                                </option>
+
+                                <option value="Sr.">
+                                    Sr.
+                                </option>
+
+                                <option value="II">
+                                    II
+                                </option>
+
+                                <option value="III">
+                                    III
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="birthDate">
+                                Date of Birth
+                            </label>
+
+                            <input
+                                type="date"
+                                id="birthDate"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="age">
+                                Age
+                            </label>
+
+                            <input
+                                type="number"
+                                id="age"
+                                placeholder="Age"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="gender">
+                                Gender
+                            </label>
+
+                            <select id="gender">
+
+                                <option value="">
+                                    Select gender
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Prefer not to say">
+                                    Prefer not to say
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label for="address">
+                                Address
+                            </label>
+
+                            <input
+                                type="text"
+                                id="address"
+                                placeholder="Enter complete address"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactNumber">
+                                Contact Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contactNumber"
+                                placeholder="09XXXXXXXXX"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="example@email.com"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     EMPLOYMENT INFORMATION
+                ========================== -->
+
+                <section class="form-section">
+
+                    <h2>Employment Information</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="position">
+                                Position
+                            </label>
+
+                            <input
+                                type="text"
+                                id="position"
+                                placeholder="Enter position"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="department">
+                                Department
+                            </label>
+
+                            <select id="department">
+
+                                <option value="">
+                                    Select department
+                                </option>
+
+                                <option value="IT">
+                                    IT Department
+                                </option>
+
+                                <option value="Human Resources">
+                                    Human Resources
+                                </option>
+
+                                <option value="Accounting">
+                                    Accounting
+                                </option>
+
+                                <option value="Finance">
+                                    Finance
+                                </option>
+
+                                <option value="Operations">
+                                    Operations
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="employmentStatus">
+                                Employment Status
+                            </label>
+
+                            <select id="employmentStatus">
+
+                                <option value="">
+                                    Select status
+                                </option>
+
+                                <option value="Regular">
+                                    Regular
+                                </option>
+
+                                <option value="Probationary">
+                                    Probationary
+                                </option>
+
+                                <option value="Contractual">
+                                    Contractual
+                                </option>
+
+                                <option value="Part-time">
+                                    Part-time
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="dateHired">
+                                Date Hired
+                            </label>
+
+                            <input
+                                type="date"
+                                id="dateHired"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     ACCOUNT INFORMATION
+                ========================== -->
+
+                <section class="form-section">
+
+                    <h2>Account Information</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="employeeUsername">
+                                Username
+                            </label>
+
+                            <input
+                                type="text"
+                                id="employeeUsername"
+                                placeholder="Create username"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="employeePassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="employeePassword"
+                                placeholder="Create password"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="confirmPassword">
+                                Confirm Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm password"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- MESSAGE -->
+
+                <p
+                    id="message"
+                    class="message"
+                ></p>
+
+
+                <!-- BUTTONS -->
+
+                <div class="form-buttons">
+
+                    <a
+                        href="login.html"
+                        class="back-button"
+                    >
+                        Back to Login
+                    </a>
+
+                    <button
+                        type="button"
+                        id="createAccountBtn"
+                    >
+                        CREATE ACCOUNT
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="create_employee.js"></script>
+
+</body>
+
+</html>

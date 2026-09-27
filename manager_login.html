@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="manager_login.css">
+
+    <title>MANAGER LOGIN</title>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-panel">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    💼
+                </div>
+
+                <div>
+                    <h1>PAYROLL</h1>
+                    <h2>MANAGEMENT SYSTEM</h2>
+                </div>
+
+            </div>
+
+            <p class="tagline">
+                Manage Employee Payroll<br>
+                Easily and Efficiently.
+            </p>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="right-panel">
+
+            <h2>Manager Login</h2>
+
+            <p class="welcome">Welcome Back</p>
+
+            <p class="instruction">
+                Please enter your account details.
+            </p>
+
+
+            <!-- USERNAME -->
+            <div class="input-box">
+
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="input-box">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                >
+
+            </div>
+
+
+            <!-- LOGIN -->
+            <button id="managerLoginBtn">
+                Login
+            </button>
+
+
+            <!-- ERROR -->
+            <p id="loginError"></p>
+
+
+            <hr>
+
+
+            <!-- BACK -->
+            <button
+                class="back-button"
+                onclick="window.location.href='login.html'"
+            >
+                Back to Employee Login
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="manager_login.js"></script>
+
+</body>
+
+</html>

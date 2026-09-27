@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="payroll.css"
+    >
+
+    <title>Salary Hub - Payroll</title>
+
+</head>
+
+<body>
+
+    <main class="payroll-page">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>Payroll</h1>
+
+                <p>
+                    Salary Hub Payroll Processing
+                </p>
+
+            </div>
+
+            <button
+                onclick="goBack()"
+                class="back-button"
+            >
+                Back
+            </button>
+
+        </header>
+
+
+        <!-- =========================
+             SEARCH
+        ========================== -->
+
+        <section class="search-card">
+
+            <h2>Employee Payroll</h2>
+
+            <div class="search-row">
+
+                <div>
+
+                    <label>
+                        Employee ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="employeeNumber"
+                        placeholder="001"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Payroll Month
+                    </label>
+
+                    <input
+                        type="month"
+                        id="payrollMonth"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Payroll Cutoff
+                    </label>
+
+                    <select id="payrollCutoff">
+
+                        <option value="">
+                            Select Cutoff
+                        </option>
+
+                        <option value="1-15">
+                            1st Cutoff (1-15)
+                        </option>
+
+                        <option value="16-end">
+                            2nd Cutoff (16-End)
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    id="searchEmployeeBtn"
+                >
+                    SEARCH
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAYROLL
+        ========================== -->
+
+        <section
+            id="payrollSection"
+            class="payroll-card"
+        >
+
+            <!-- EMPLOYEE INFORMATION -->
+
+            <div class="employee-info">
+
+                <h2>Employee Information</h2>
+
+                <p>
+                    Employee:
+                    <span id="resultName">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    Employee ID:
+                    <span id="resultId">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    Basic Salary:
+                    ₱<span id="basicSalary">
+                        0.00
+                    </span>
+                </p>
+
+                <p>
+                    Salary Used:
+                    ₱<span id="salaryUsed">
+                        0.00
+                    </span>
+                </p>
+
+                <p>
+                    Effective Salary Date:
+                    <span id="salaryEffectiveDate">
+                        -
+                    </span>
+                </p>
+
+            </div>
+
+
+            <!-- ATTENDANCE -->
+
+            <div class="attendance-summary">
+
+                <h2>Attendance Summary</h2>
+
+                <p>
+                    Payroll Cutoff:
+                    <span id="resultCutoff">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    Working Days:
+                    <span id="workingDays">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Full Days:
+                    <span id="fullDays">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Half Days:
+                    <span id="halfDays">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Days Worked:
+                    <span id="daysWorked">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Absent Days:
+                    <span id="absentDays">
+                        0
+                    </span>
+                </p>
+
+            </div>
+
+
+            <!-- EARNINGS -->
+
+            <div class="earnings">
+
+                <h2>Earnings</h2>
+
+
+                <label>
+                    Overtime Pay
+                </label>
+
+                <input
+                    type="number"
+                    id="overtimePay"
+                    value="0"
+                    min="0"
+                    step="0.01"
+                >
+
+
+                <label>
+                    Holiday / Double Pay
+                </label>
+
+                <input
+                    type="number"
+                    id="holidayPay"
+                    value="0"
+                    min="0"
+                    step="0.01"
+                >
+
+
+                <label>
+                    Other Earnings
+                </label>
+
+                <input
+                    type="number"
+                    id="otherEarnings"
+                    value="0"
+                    min="0"
+                    step="0.01"
+                >
+
+            </div>
+
+
+            <!-- DEDUCTIONS -->
+
+            <div class="deductions">
+
+                <h2>Deductions</h2>
+
+                <p>
+                    SSS:
+                    ₱<span id="sss">
+                        0.00
+                    </span>
+                </p>
+
+                <p>
+                    PhilHealth:
+                    ₱<span id="philhealth">
+                        0.00
+                    </span>
+                </p>
+
+                <p>
+                    Pag-IBIG:
+                    ₱<span id="pagibig">
+                        0.00
+                    </span>
+                </p>
+
+                <p>
+                    Withholding Tax:
+                    ₱<span id="withholdingTax">
+                        0.00
+                    </span>
+                </p>
+
+                <p>
+                    Absence Deduction:
+                    ₱<span id="absenceDeduction">
+                        0.00
+                    </span>
+                </p>
+
+                <p>
+                    Total Deductions:
+                    ₱<span id="totalDeductions">
+                        0.00
+                    </span>
+                </p>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div class="result-card">
+
+                <p>
+                    Basic Pay
+                </p>
+
+                <strong>
+                    ₱<span id="basicPay">
+                        0.00
+                    </span>
+                </strong>
+
+
+                <p>
+                    Gross Pay
+                </p>
+
+                <strong>
+                    ₱<span id="grossPay">
+                        0.00
+                    </span>
+                </strong>
+
+
+                <p>
+                    Net Pay
+                </p>
+
+                <strong>
+                    ₱<span id="netPay">
+                        0.00
+                    </span>
+                </strong>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="action-buttons">
+
+                <button
+                    id="calculatePayrollBtn"
+                >
+                    CALCULATE PAYROLL
+                </button>
+
+                <button
+                    id="savePayrollBtn"
+                >
+                    SAVE PAYROLL
+                </button>
+
+            </div>
+
+
+            <p
+                id="saveMessage"
+                class="save-message"
+            ></p>
+
+        </section>
+
+    </main>
+
+
+    <script src="payroll.js"></script>
+
+</body>
+
+</html>

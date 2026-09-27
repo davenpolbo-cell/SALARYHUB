@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="salary_history.css"
+    >
+
+    <title>Salary Hub - Salary History</title>
+
+</head>
+
+<body>
+
+    <main class="salary-page">
+
+        <header class="page-header">
+
+            <div>
+                <h1>Salary History</h1>
+
+                <p>
+                    Employee salary changes and effective dates
+                </p>
+            </div>
+
+            <button
+                onclick="goBack()"
+                class="back-button"
+            >
+                Back
+            </button>
+
+        </header>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-card">
+
+            <h2>Search Employee</h2>
+
+            <div class="search-row">
+
+                <div class="input-group">
+
+                    <label for="employeeNumber">
+                        Employee ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="employeeNumber"
+                        placeholder="EMP001"
+                    >
+
+                </div>
+
+
+                <button
+                    id="searchEmployeeBtn"
+                    class="primary-button"
+                >
+                    SEARCH
+                </button>
+
+            </div>
+
+            <p
+                id="searchMessage"
+                class="message"
+            ></p>
+
+        </section>
+
+
+        <!-- EMPLOYEE -->
+
+        <section
+            id="employeeSection"
+            class="employee-card"
+        >
+
+            <h2>Employee Information</h2>
+
+            <div class="employee-grid">
+
+                <div>
+                    <span>Employee ID</span>
+
+                    <strong id="resultEmployeeId">
+                        -
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Employee Name</span>
+
+                    <strong id="resultEmployeeName">
+                        -
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Current Salary</span>
+
+                    <strong>
+                        ₱<span id="currentSalary">
+                            0.00
+                        </span>
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHANGE SALARY -->
+
+        <section
+            id="salarySection"
+            class="salary-card"
+        >
+
+            <h2>Update Salary</h2>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label for="newSalary">
+                        New Basic Salary
+                    </label>
+
+                    <input
+                        type="number"
+                        id="newSalary"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter new salary"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="effectiveDate">
+                        Effective Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="effectiveDate"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="updateSalaryBtn"
+                class="primary-button"
+            >
+                UPDATE SALARY
+            </button>
+
+            <p
+                id="updateMessage"
+                class="message"
+            ></p>
+
+        </section>
+
+
+        <!-- HISTORY -->
+
+        <section class="history-card">
+
+            <h2>Salary History</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee ID</th>
+
+                            <th>Employee Name</th>
+
+                            <th>Basic Salary</th>
+
+                            <th>Effective Date</th>
+
+                            <th>Date Updated</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="salaryHistoryBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="salary_history.js"></script>
+
+</body>
+
+</html>

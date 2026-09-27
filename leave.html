@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="leave.css"
+    >
+
+    <title>Salary Hub - Leave</title>
+
+</head>
+
+<body>
+
+    <main class="leave-page">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>Leave Management</h1>
+
+                <p>
+                    Manage employee leave requests
+                </p>
+
+            </div>
+
+            <button
+                onclick="goBack()"
+                class="back-button"
+            >
+                Back
+            </button>
+
+        </header>
+
+
+        <section class="leave-card">
+
+            <h2>Leave Requests</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee ID</th>
+
+                            <th>Employee</th>
+
+                            <th>Leave Type</th>
+
+                            <th>Start Date</th>
+
+                            <th>End Date</th>
+
+                            <th>Reason</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="leaveTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="leave.js"></script>
+
+</body>
+
+</html>
